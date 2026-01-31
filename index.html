@@ -3,18 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Project</title>
+    <title>Gian Pierre Lopez Manzano | UX Designer</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My First Project</h1>
-    </header>
-    <main>
-        <p>This is my first website hosted on GitHub!</p>
-    </main>
-    <footer>
-        <p>&copy; 2026 Gian Pierre</p>
-    </footer>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="logo">GP</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#background">Background</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <p class="tagline">FROM HEALTHCARE PRECISION TO USER-CENTERED DESIGN</p>
+                <h1 class="name">Gian Pierre<br>Lopez Manzano</h1>
+                <h2 class="title">UX Designer</h2>
+                <p class="description">Blending empathy from healthcare with design thinking to create meaningful digital experiences that truly understand users.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="https://linkedin.com" class="btn btn-outline">Connect on LinkedIn</a>
+                </div>
+            </div>
+            <div class="gradient-decoration"></div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about">
+            <h2 class="section-title">About Me</h2>
+            <p>I'm a UX Designer with a unique background in healthcare, bringing a deep understanding of user empathy and attention to detail to every project. My journey from healthcare to design has equipped me with the skills to create digital experiences that truly resonate with users.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>User Research</h3>
+                    <p>Conducting interviews, surveys, and usability testing to understand user needs.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Wireframing</h3>
+                    <p>Creating low and high-fidelity wireframes to visualize solutions.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Prototyping</h3>
+                    <p>Building interactive prototypes using Figma and other design tools.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Visual Design</h3>
+                    <p>Crafting beautiful interfaces with attention to typography and color.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <a href="glassbank.html" class="project-card project-card-link">
+                    <div class="project-image project-image-glassbank"></div>
+                    <h3>GlassBank</h3>
+                    <p>A modern mobile banking experience designed for clarity and trust.</p>
+                </a>
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <h3>E-commerce Platform</h3>
+                    <p>Streamlining the shopping experience for better conversions.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <h3>Coming Soon</h3>
+                    <p>More projects in development.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Background Section -->
+        <section id="background" class="section background">
+            <h2 class="section-title">Background</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>UX Designer</h3>
+                    <p class="date">2023 - Present</p>
+                    <p>Creating user-centered digital experiences.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Healthcare Professional</h3>
+                    <p class="date">2019 - 2023</p>
+                    <p>Developed deep empathy and attention to detail.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <p>I'm always open to discussing new projects and opportunities.</p>
+            <a href="mailto:hello@example.com" class="btn btn-primary">Say Hello</a>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Gian Pierre Lopez Manzano. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
