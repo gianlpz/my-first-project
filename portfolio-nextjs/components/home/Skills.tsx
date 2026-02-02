@@ -1,0 +1,47 @@
+const skills = [
+  {
+    title: "User Research",
+    description:
+      "Conducting interviews, surveys, and usability testing to understand user needs.",
+  },
+  {
+    title: "Wireframing",
+    description:
+      "Creating low and high-fidelity wireframes to visualize solutions.",
+  },
+  {
+    title: "Prototyping",
+    description:
+      "Building interactive prototypes using Figma and other design tools.",
+  },
+  {
+    title: "Visual Design",
+    description:
+      "Crafting beautiful interfaces with attention to typography and color.",
+  },
+];
+
+export function Skills() {
+  return (
+    <section id="skills" className="py-16 md:py-24 px-4 md:px-8 bg-[#0f1419]">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 md:mb-12">
+          Skills
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          {skills.map((skill) => (
+            <div key={skill.title} className="skill-card">
+              <h3 className="text-coral text-lg md:text-xl font-semibold mb-3">
+                {skill.title}
+              </h3>
+              <p className="text-white/60 text-sm md:text-base">
+                {skill.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

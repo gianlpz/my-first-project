@@ -1,0 +1,611 @@
+@import "tailwindcss";
+
+/* ================================
+   PORTFOLIO THEME
+   ================================ */
+
+@theme inline {
+  /* Radius Scale */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  /* Color System */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+
+  /* Portfolio Colors */
+  --color-coral: #e07b67;
+  --color-teal: #3d8b8b;
+  --color-teal-dark: #2d7a7a;
+
+  /* GlassBank Colors */
+  --color-glass-purple: #7B3FF2;
+  --color-glass-pink: #EC4899;
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Dark theme */
+  --background: #0a0a0f;
+  --foreground: #ffffff;
+
+  /* Portfolio primary (teal) */
+  --primary: #3d8b8b;
+  --primary-foreground: #ffffff;
+
+  /* Portfolio accent (coral) */
+  --accent: #e07b67;
+  --accent-foreground: #ffffff;
+
+  /* Muted colors */
+  --muted: rgba(255, 255, 255, 0.05);
+  --muted-foreground: rgba(255, 255, 255, 0.7);
+
+  /* Border */
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+/* ================================
+   BASE STYLES
+   ================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  line-height: 1.6;
+  background-color: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+* {
+  border-color: var(--border);
+}
+
+/* ================================
+   UTILITY CLASSES
+   ================================ */
+
+@layer utilities {
+  /* Glass Effects */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+  }
+
+  .glass-card-strong {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 0.75rem;
+  }
+
+  /* Gradients */
+  .gradient-primary {
+    background: linear-gradient(135deg, #7b3ff2 0%, #ec4899 100%);
+  }
+
+  .gradient-teal-coral {
+    background: linear-gradient(135deg, #3d8b8b 0%, #e07b67 100%);
+  }
+
+  .gradient-glassbank {
+    background: linear-gradient(135deg, #1a365d 0%, #3d8b8b 50%, #2a9d8f 100%);
+  }
+
+  /* Text Gradients */
+  .text-gradient {
+    background: linear-gradient(135deg, #ffffff 0%, #c9c9c9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-purple-pink {
+    background: linear-gradient(135deg, #7b3ff2 0%, #ec4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Animations */
+  .fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes morphing {
+    0%,
+    100% {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    50% {
+      border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+    }
+  }
+
+  .animate-morph {
+    animation: morphing 15s ease-in-out infinite;
+  }
+
+  /* Hide scrollbar */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Safe areas */
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+/* ================================
+   COMPONENT STYLES
+   ================================ */
+
+/* Buttons */
+.btn {
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #3d8b8b;
+  color: #ffffff;
+  border: 2px solid #3d8b8b;
+}
+
+.btn-primary:hover {
+  background-color: #2d7a7a;
+  border-color: #2d7a7a;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Skill Cards */
+.skill-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(224, 123, 103, 0.5);
+}
+
+/* Project Cards */
+.project-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Timeline */
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  border-left: 2px solid rgba(224, 123, 103, 0.3);
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #e07b67;
+  border-radius: 50%;
+}
+
+/* ================================
+   CASE STUDY COMPONENTS
+   ================================ */
+
+/* Meta Badges */
+.meta-badge {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Insight Cards */
+.insight-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.insight-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(61, 139, 139, 0.5);
+}
+
+/* Principle Cards */
+.principle-card {
+  background: rgba(224, 123, 103, 0.1);
+  border: 1px solid rgba(224, 123, 103, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* Persona Cards */
+.persona-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.persona-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Finding Cards */
+.finding-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.75rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.finding-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(61, 139, 139, 0.5);
+}
+
+/* Bank Badge */
+.bank-badge {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+/* Process Step */
+.process-step {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+/* Flow Steps */
+.flow-step {
+  background: rgba(123, 63, 242, 0.15);
+  border: 1px solid rgba(123, 63, 242, 0.3);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* MVP Feature Card */
+.mvp-feature-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.75rem;
+  display: flex;
+  gap: 1.25rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.mvp-feature-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(123, 63, 242, 0.5);
+}
+
+/* Skill Tag */
+.skill-tag {
+  background: rgba(61, 139, 139, 0.15);
+  border: 1px solid rgba(61, 139, 139, 0.3);
+  color: #3d8b8b;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Design System Card */
+.design-system-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.75rem;
+}
+
+/* Color Swatches */
+.color-swatch {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.color-swatch.primary {
+  background: #7b3ff2;
+}
+
+.color-swatch.gradient {
+  background: linear-gradient(135deg, #7b3ff2 0%, #e07b67 100%);
+}
+
+.color-swatch.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.color-swatch.dark {
+  background: #0a0a0f;
+}
+
+/* Screen Placeholder */
+.screen-placeholder {
+  flex-shrink: 0;
+  width: 180px;
+  height: 360px;
+  background: linear-gradient(135deg, #1a365d 0%, #3d8b8b 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ================================
+   GLASSBANK DEMO STYLES
+   ================================ */
+
+/* GlassBank Theme Variables */
+.glassbank-demo {
+  --gb-background: #1e1e1e;
+  --gb-primary: #7b3ff2;
+  --gb-accent: #ec4899;
+  --gb-card: rgba(255, 255, 255, 0.08);
+  --gb-border: rgba(255, 255, 255, 0.15);
+}
+
+/* iPhone Frame */
+.iphone-frame {
+  position: relative;
+  width: 393px;
+  height: 852px;
+  background: #000;
+  border-radius: 55px;
+  padding: 12px;
+  box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.5),
+    0 30px 60px -30px rgba(0, 0, 0, 0.4), inset 0 0 0 3px #1a1a1a,
+    inset 0 0 0 6px #2a2a2a;
+}
+
+.iphone-screen {
+  width: 100%;
+  height: 100%;
+  background: #1e1e1e;
+  border-radius: 44px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Dynamic Island */
+.dynamic-island {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 126px;
+  height: 37px;
+  background: #000;
+  border-radius: 20px;
+  z-index: 100;
+}
+
+/* GlassBank Glass Card */
+.gb-glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+}
+
+.gb-glass-card-strong {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+}
+
+/* GlassBank Gradient */
+.gb-balance-card {
+  background: linear-gradient(135deg, #7b3ff2 0%, #a855f7 50%, #ec4899 100%);
+  border-radius: 1.25rem;
+}
+
+.gb-gradient-primary {
+  background: linear-gradient(135deg, #7b3ff2 0%, #ec4899 100%);
+}
+
+/* GlassBank Button */
+.gb-glass-button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.2s ease;
+}
+
+.gb-glass-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.gb-glass-button:active {
+  transform: scale(0.98);
+}
+
+/* GlassBank Input */
+.gb-glass-input {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.2s ease;
+}
+
+.gb-glass-input:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #7b3ff2;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(123, 63, 242, 0.2);
+}
+
+/* Simplified Mode */
+.simplified-mode {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.simplified-mode button,
+.simplified-mode a {
+  min-height: 56px;
+  font-size: 1.125rem;
+}
+
+/* ================================
+   RESPONSIVE STYLES
+   ================================ */
+
+@media (max-width: 768px) {
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .skill-card,
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .screen-placeholder {
+    width: 140px;
+    height: 280px;
+  }
+
+  /* Hide iPhone frame on mobile - show full screen */
+  .iphone-frame {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .iphone-screen {
+    border-radius: 0;
+  }
+
+  .dynamic-island {
+    display: none;
+  }
+}
