@@ -40,16 +40,30 @@ function CaseHero() {
         </div>
       </div>
 
-      <div className="flex-1 flex justify-center items-center">
-        <div className="relative w-full max-w-sm aspect-[9/16] rounded-3xl overflow-hidden shadow-2xl">
-          <Image
-            src="/images/glassbank-hero.gif"
-            alt="GlassBank app demo showing dashboard, transactions, and automations"
-            fill
-            className="object-cover"
-            priority
-            unoptimized
-          />
+      <div className="flex-1 mt-8 lg:mt-0 w-full overflow-hidden lg:overflow-visible">
+        {/* Horizontal slide carousel */}
+        <div className="flex gap-3 md:gap-4 overflow-x-auto pb-4 px-4 snap-x snap-mandatory no-scrollbar lg:justify-center lg:overflow-x-visible">
+          {[
+            { src: "/images/wireframe-welcome.png", alt: "Welcome screen - Onboarding start" },
+            { src: "/images/wireframe-language.png", alt: "Language selection screen" },
+            { src: "/images/wireframe-dashboard-simplified.png", alt: "Simplified dashboard for accessibility" },
+            { src: "/images/wireframe-dashboard-standard.png", alt: "Standard dashboard - Main experience" },
+            { src: "/images/wireframe-transactions.png", alt: "Transaction details screen" },
+            { src: "/images/wireframe-automation.png", alt: "Task automation screen" },
+          ].map((screen, index) => (
+            <div
+              key={screen.src}
+              className="relative flex-shrink-0 w-[120px] sm:w-[130px] md:w-[140px] lg:w-[130px] aspect-[9/19] rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-[#0a0a0f] snap-center transition-transform duration-300 hover:scale-105"
+            >
+              <Image
+                src={screen.src}
+                alt={screen.alt}
+                fill
+                className="object-cover object-top"
+                priority={index < 2}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -67,7 +81,7 @@ function Overview() {
     {
       title: "The Solution",
       content:
-        "GlassBank provides an inclusive banking experience with a dual-mode interface (Standard & Simplified), instant multilingual onboarding, clear merchant identification, and transparent transaction flows\u2014making banking accessible to everyone.",
+        "GlassBank provides an inclusive banking experience with a dual-mode interface (Standard & Simplified), instant multilingual onboarding, clear merchant identification, and transparent transaction flows—making banking accessible to everyone.",
     },
     {
       title: "My Role",
@@ -147,7 +161,7 @@ function Research() {
         </h2>
         <p className="text-white/70 text-lg mb-8 max-w-3xl">
           Through competitive analysis and user research, I identified critical
-          gaps in how banking apps serve diverse user needs\u2014particularly
+          gaps in how banking apps serve diverse user needs—particularly
           around accessibility, language support, and transaction clarity.
         </p>
 
@@ -320,7 +334,7 @@ function CompetitiveAnalysis() {
     {
       label: "Finding 2",
       title: "Accessibility Mode Limitations",
-      description: "No in-app simplified modes\u2014users rely on device settings.",
+      description: "No in-app simplified modes—users rely on device settings.",
       opportunity: "Banking-specific accessibility mode",
       solution: "Dual dashboard (Standard & Simplified)",
     },
@@ -383,6 +397,89 @@ function CompetitiveAnalysis() {
                   <span className="text-coral font-medium">Solution:</span>{" "}
                   <span className="text-white/70">{finding.solution}</span>
                 </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Design Showcase Section
+function DesignShowcase() {
+  const groups = [
+    {
+      title: "Onboarding Flow",
+      description:
+        "Language selection comes first—before account creation or any other step. This ensures non-English speakers can navigate the entire onboarding journey in their preferred language from the very first interaction.",
+      images: [
+        { src: "/images/wireframe-welcome.png", alt: "Welcome screen" },
+        { src: "/images/wireframe-language.png", alt: "Language selection" },
+      ],
+    },
+    {
+      title: "Dashboard Modes",
+      description:
+        "Two distinct dashboard experiences: Standard mode for full-feature access, and Simplified mode with larger touch targets and essential actions only. Users can switch between modes with a single tap, giving them control over complexity.",
+      images: [
+        { src: "/images/wireframe-dashboard-standard.png", alt: "Standard dashboard" },
+        { src: "/images/wireframe-dashboard-simplified.png", alt: "Simplified dashboard" },
+      ],
+    },
+    {
+      title: "Core Features",
+      description:
+        "Transactions show real merchant names and logos instead of cryptic codes, reducing confusion and building trust. The automation screen simplifies recurring payments to just a few taps, removing a major friction point identified in research.",
+      images: [
+        { src: "/images/wireframe-transactions.png", alt: "Transactions screen" },
+        { src: "/images/wireframe-automation.png", alt: "Automation screen" },
+      ],
+    },
+  ];
+
+  return (
+    <section className="py-16 md:py-20 px-4 md:px-8">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          Design Showcase
+        </h2>
+        <p className="text-white/70 text-lg mb-12 max-w-3xl">
+          Key screens that demonstrate how research insights translated into
+          design decisions.
+        </p>
+
+        <div className="space-y-16">
+          {groups.map((group, index) => (
+            <div
+              key={group.title}
+              className={`flex flex-col ${
+                index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"
+              } gap-8 lg:gap-12 items-center`}
+            >
+              <div className="flex-1">
+                <h3 className="text-coral text-xl font-semibold mb-3">
+                  {group.title}
+                </h3>
+                <p className="text-white/70 leading-relaxed">
+                  {group.description}
+                </p>
+              </div>
+
+              <div className="flex-1 flex gap-4 justify-center">
+                {group.images.map((img) => (
+                  <div
+                    key={img.src}
+                    className="relative w-[140px] sm:w-[160px] md:w-[180px] aspect-[9/19] rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-[#0a0a0f]"
+                  >
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-cover object-top"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           ))}
@@ -476,7 +573,7 @@ function MVPFeatures() {
       icon: "\ud83d\udee1\ufe0f",
       title: "Post-Update Safety Net",
       description:
-        "After updates, a friendly guide shows you what changed and where to find moved features\u2014never feel lost again.",
+        "After updates, a friendly guide shows you what changed and where to find moved features—never feel lost again.",
     },
   ];
 
@@ -697,6 +794,7 @@ export default function GlassBankPage() {
       <Research />
       <Personas />
       <CompetitiveAnalysis />
+      <DesignShowcase />
       <DesignProcess />
       <MVPFeatures />
       <DesignSystem />

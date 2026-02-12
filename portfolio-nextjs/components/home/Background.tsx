@@ -2,12 +2,20 @@ const timelineItems = [
   {
     title: "UX Designer",
     date: "2023 - Present",
-    description: "Creating user-centered digital experiences.",
+    description:
+      "Designing user-centered digital experiences with a focus on accessibility and inclusion. Completed an end-to-end case study (GlassBank) involving competitive analysis, persona development, wireframing, and interactive prototyping.",
+  },
+  {
+    title: "Career Transition",
+    date: "2023",
+    description:
+      "Pivoted from healthcare to UX design, driven by a passion for solving human problems through technology. Built foundational skills in user research, Figma, and design thinking methodologies.",
   },
   {
     title: "Healthcare Professional",
     date: "2019 - 2023",
-    description: "Developed deep empathy and attention to detail.",
+    description:
+      "Worked directly with patients, developing deep empathy and communication skills. Learned to observe unspoken needs, simplify complex information, and make critical decisions under pressure—skills that directly translate to UX research and design.",
   },
 ];
 

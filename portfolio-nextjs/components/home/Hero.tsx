@@ -31,7 +31,7 @@ export function Hero() {
             View My Work
           </Link>
           <Link
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/gianlpz"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-outline"
