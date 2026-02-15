@@ -35,9 +35,30 @@ export function Projects() {
           </div>
         </Link>
 
-        <p className="text-white/40 text-sm text-center mt-8">
-          More projects coming soon
-        </p>
+        <Link
+          href="/coaching-app"
+          className="project-card block hover:scale-[1.02] transition-transform mt-8"
+        >
+          <div className="h-56 md:h-64 bg-gradient-to-br from-[#8B7355] via-[#A09078] to-[#8A9E82] flex items-center justify-center rounded-t-xl">
+            <span className="text-white/90 text-7xl md:text-8xl font-bold">
+              C
+            </span>
+          </div>
+          <div className="p-6">
+            <h3 className="text-white text-lg md:text-xl font-semibold mb-2">
+              Coaching App
+            </h3>
+            <p className="text-white/60 text-sm md:text-base">
+              An evidence-based coaching platform for career, relationships, and
+              personal growth.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-4">
+              <span className="meta-badge">UX Research</span>
+              <span className="meta-badge">UI Design</span>
+              <span className="meta-badge">Web App</span>
+            </div>
+          </div>
+        </Link>
       </div>
     </section>
   );
