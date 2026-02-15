@@ -31,9 +31,9 @@ function CaseHero() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-          <Link href="/glassbank/demo" className="btn btn-primary">
-            Try the Demo
-          </Link>
+          <a href="https://glassbank-app.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            Try Demo
+          </a>
           <Link href="#overview" className="btn btn-outline">
             Explore Process
           </Link>
@@ -773,9 +773,9 @@ function CTA() {
           Explore the live prototype or return to see more of my work.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/glassbank/demo" className="btn btn-primary">
-            Try the Demo
-          </Link>
+          <a href="https://glassbank-app.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            Try Demo
+          </a>
           <Link href="/#projects" className="btn btn-outline">
             Back to Portfolio
           </Link>
