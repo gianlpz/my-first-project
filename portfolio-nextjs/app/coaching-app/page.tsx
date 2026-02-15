@@ -12,6 +12,30 @@ function CaseHero() {
           &larr; Back to Projects
         </Link>
 
+        <div className="mb-4 flex justify-center lg:justify-start">
+          <svg className="w-12 h-12" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Coaching App logo">
+            <defs>
+              <linearGradient id="hero-ca-bg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stopColor="#8B7355"/>
+                <stop offset="100%" stopColor="#6F5B3E"/>
+              </linearGradient>
+              <linearGradient id="hero-ca-accent" x1="40" y1="30" x2="80" y2="90" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stopColor="#B89E8A"/>
+                <stop offset="100%" stopColor="#8A9E82"/>
+              </linearGradient>
+            </defs>
+            <rect width="120" height="120" rx="28" fill="url(#hero-ca-bg)"/>
+            <rect x="0" y="0" width="120" height="60" rx="28" fill="rgba(255,255,255,0.12)"/>
+            <g transform="translate(60,60)">
+              <circle r="32" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="1.5"/>
+              <path d="M0,-30 L6,-6 L30,0 L6,6 L0,30 L-6,6 L-30,0 L-6,-6 Z" fill="url(#hero-ca-accent)" opacity="0.9"/>
+              <path d="M0,-14 L4,0 L0,14 L-4,0 Z" fill="white" opacity="0.95"/>
+              <circle r="3" fill="white"/>
+            </g>
+            <rect x="8" y="8" width="50" height="24" rx="12" fill="rgba(255,255,255,0.15)"/>
+          </svg>
+        </div>
+
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gradient mb-4">
           Coaching App
         </h1>
@@ -46,9 +70,21 @@ function CaseHero() {
 
       <div className="flex-1 mt-8 lg:mt-0 flex items-center justify-center">
         <div className="w-64 h-64 md:w-80 md:h-80 rounded-3xl bg-gradient-to-br from-[#8B7355] via-[#A09078] to-[#8A9E82] flex items-center justify-center shadow-2xl border border-white/10">
-          <span className="text-white/90 text-8xl md:text-9xl font-bold">
-            C
-          </span>
+          <svg className="w-40 h-40 md:w-48 md:h-48" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Coaching App logo">
+            <defs>
+              <linearGradient id="big-ca-accent" x1="40" y1="30" x2="80" y2="90" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stopColor="#B89E8A"/>
+                <stop offset="100%" stopColor="#8A9E82"/>
+              </linearGradient>
+            </defs>
+            <g transform="translate(60,60)">
+              <circle r="42" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="1.5"/>
+              <circle r="32" fill="none" stroke="rgba(255,255,255,0.12)" strokeWidth="1.5"/>
+              <path d="M0,-30 L6,-6 L30,0 L6,6 L0,30 L-6,6 L-30,0 L-6,-6 Z" fill="url(#big-ca-accent)" opacity="0.9"/>
+              <path d="M0,-14 L4,0 L0,14 L-4,0 Z" fill="white" opacity="0.95"/>
+              <circle r="3" fill="white"/>
+            </g>
+          </svg>
         </div>
       </div>
     </section>
