@@ -27,6 +27,44 @@
         <section class="case-hero">
             <div class="case-hero-content">
                 <a href="index.html#projects" class="back-link">&larr; Back to Projects</a>
+                <div class="case-hero-logo">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="GlassBank logo">
+                        <defs>
+                            <linearGradient id="hero-arrow-face-light" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#A855F7" stop-opacity="0.8"/>
+                                <stop offset="100%" stop-color="#7B3FF2" stop-opacity="0.5"/>
+                            </linearGradient>
+                            <linearGradient id="hero-arrow-face-dark" x1="100%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#7B3FF2" stop-opacity="0.9"/>
+                                <stop offset="100%" stop-color="#4C1D95" stop-opacity="0.6"/>
+                            </linearGradient>
+                            <linearGradient id="hero-arrow-face-mid" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#EC4899" stop-opacity="0.6"/>
+                                <stop offset="100%" stop-color="#7B3FF2" stop-opacity="0.4"/>
+                            </linearGradient>
+                            <linearGradient id="hero-arrow-shine" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="white" stop-opacity="0.6"/>
+                                <stop offset="50%" stop-color="white" stop-opacity="0"/>
+                            </linearGradient>
+                            <filter id="hero-arrow-glow">
+                                <feGaussianBlur stdDeviation="3" result="blur"/>
+                                <feMerge>
+                                    <feMergeNode in="blur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <polygon points="100,28 155,120 100,105" fill="url(#hero-arrow-face-dark)" stroke="rgba(255,255,255,0.2)" stroke-width="0.8"/>
+                        <polygon points="100,28 45,120 100,105" fill="url(#hero-arrow-face-light)" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/>
+                        <polygon points="155,120 100,105 130,165" fill="url(#hero-arrow-face-mid)" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+                        <polygon points="45,120 100,105 70,165" fill="url(#hero-arrow-face-light)" stroke="rgba(255,255,255,0.2)" stroke-width="0.8" opacity="0.7"/>
+                        <polygon points="100,28 100,105 130,165 100,145 70,165" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+                        <line x1="100" y1="28" x2="45" y2="120" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" filter="url(#hero-arrow-glow)"/>
+                        <polygon points="100,28 72,74 100,65" fill="url(#hero-arrow-shine)" opacity="0.5"/>
+                        <circle cx="90" cy="55" r="2" fill="white" opacity="0.7" filter="url(#hero-arrow-glow)"/>
+                        <circle cx="100" cy="30" r="2.5" fill="white" opacity="0.8" filter="url(#hero-arrow-glow)"/>
+                    </svg>
+                </div>
                 <h1 class="case-title">GlassBank</h1>
                 <p class="case-tagline">An inclusive mobile banking experience designed with accessibility and clarity at its core—featuring dual-mode interface, multilingual support, and transparent transactions.</p>
                 <div class="case-meta">

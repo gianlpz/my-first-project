@@ -72,7 +72,56 @@
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 <a href="glassbank.html" class="project-card project-card-link">
-                    <div class="project-image project-image-glassbank"></div>
+                    <div class="project-image project-image-glassbank">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="glassbank-logo" aria-label="GlassBank logo">
+                            <defs>
+                                <linearGradient id="card-arrow-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#7B3FF2"/>
+                                    <stop offset="100%" stop-color="#EC4899"/>
+                                </linearGradient>
+                                <linearGradient id="card-arrow-face-light" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#A855F7" stop-opacity="0.8"/>
+                                    <stop offset="100%" stop-color="#7B3FF2" stop-opacity="0.5"/>
+                                </linearGradient>
+                                <linearGradient id="card-arrow-face-dark" x1="100%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#7B3FF2" stop-opacity="0.9"/>
+                                    <stop offset="100%" stop-color="#4C1D95" stop-opacity="0.6"/>
+                                </linearGradient>
+                                <linearGradient id="card-arrow-face-mid" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#EC4899" stop-opacity="0.6"/>
+                                    <stop offset="100%" stop-color="#7B3FF2" stop-opacity="0.4"/>
+                                </linearGradient>
+                                <linearGradient id="card-arrow-shine" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="white" stop-opacity="0.6"/>
+                                    <stop offset="50%" stop-color="white" stop-opacity="0"/>
+                                </linearGradient>
+                                <filter id="card-arrow-glow">
+                                    <feGaussianBlur stdDeviation="3" result="blur"/>
+                                    <feMerge>
+                                        <feMergeNode in="blur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                                <filter id="card-arrow-shadow">
+                                    <feGaussianBlur stdDeviation="5"/>
+                                </filter>
+                            </defs>
+                            <ellipse cx="100" cy="180" rx="45" ry="8" fill="rgba(123,63,242,0.15)" filter="url(#card-arrow-shadow)"/>
+                            <polygon points="100,28 155,120 100,105" fill="url(#card-arrow-face-dark)" stroke="rgba(255,255,255,0.2)" stroke-width="0.8"/>
+                            <polygon points="100,28 45,120 100,105" fill="url(#card-arrow-face-light)" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/>
+                            <polygon points="155,120 100,105 130,165" fill="url(#card-arrow-face-mid)" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+                            <polygon points="45,120 100,105 70,165" fill="url(#card-arrow-face-light)" stroke="rgba(255,255,255,0.2)" stroke-width="0.8" opacity="0.7"/>
+                            <polygon points="100,28 100,105 130,165 100,145 70,165" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+                            <line x1="100" y1="28" x2="45" y2="120" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" filter="url(#card-arrow-glow)"/>
+                            <polygon points="100,28 72,74 100,65" fill="url(#card-arrow-shine)" opacity="0.5"/>
+                            <circle cx="90" cy="55" r="2" fill="white" opacity="0.7" filter="url(#card-arrow-glow)"/>
+                            <circle cx="100" cy="30" r="2.5" fill="white" opacity="0.8" filter="url(#card-arrow-glow)"/>
+                            <line x1="60" y1="155" x2="60" y2="175" stroke="rgba(123,63,242,0.3)" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="75" y1="160" x2="75" y2="178" stroke="rgba(123,63,242,0.2)" stroke-width="1" stroke-linecap="round"/>
+                            <line x1="125" y1="160" x2="125" y2="178" stroke="rgba(236,72,153,0.2)" stroke-width="1" stroke-linecap="round"/>
+                            <line x1="140" y1="155" x2="140" y2="175" stroke="rgba(236,72,153,0.3)" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h3>GlassBank</h3>
                     <p>A modern mobile banking experience designed for clarity and trust.</p>
                 </a>
