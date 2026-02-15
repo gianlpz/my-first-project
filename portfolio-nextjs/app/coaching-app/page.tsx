@@ -721,9 +721,10 @@ function DesignSystem() {
           <div className="design-system-card">
             <h4 className="text-white font-semibold mb-4">Target Device</h4>
             <p className="text-white/60 text-sm">
-              Mobile-first responsive design with safe area insets for notched
-              phones. Optimized for iPhone and Android screens with touch-friendly
-              targets and bottom navigation.
+              Mobile-first responsive design that adapts to phone, tablet, and
+              desktop. Bottom navigation on mobile, sidebar on desktop. Multi-column
+              grids on wider screens with constrained reading widths for lesson
+              content.
             </p>
           </div>
         </div>
