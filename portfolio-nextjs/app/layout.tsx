@@ -11,9 +11,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Gian Pierre Lopez Manzano | UX Designer",
+  title: "Gian Lopez | AI Engineer & Frontend Developer",
   description:
-    "UX Designer blending empathy from healthcare with design thinking to create meaningful digital experiences.",
+    "Building intelligent, user-centred web applications with React, Next.js, and AI — grounded in real UX research.",
 };
 
 export default function RootLayout({

@@ -8,22 +8,20 @@ export function Hero() {
     >
       <div className="text-center max-w-3xl z-10 slide-up">
         <p className="text-coral text-xs md:text-sm font-semibold tracking-[3px] mb-4 md:mb-6 uppercase">
-          From Healthcare Precision to User-Centered Design
+          AI Engineering · Frontend Development · UX Design
         </p>
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 md:mb-6 text-gradient">
-          Gian Pierre
-          <br />
-          Lopez Manzano
+          Gian Lopez
         </h1>
 
         <h2 className="text-coral text-xl md:text-2xl font-semibold mb-4 md:mb-6">
-          UX Designer
+          AI Engineer & Frontend Developer
         </h2>
 
         <p className="text-white/70 text-base md:text-lg max-w-xl mx-auto mb-8 md:mb-10 leading-relaxed">
-          Blending empathy from healthcare with design thinking to create
-          meaningful digital experiences that truly understand users.
+          Building intelligent, user-centred web applications with React,
+          Next.js, and AI — grounded in real UX research.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

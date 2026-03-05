@@ -35,7 +35,7 @@ export function Footer() {
           </Link>
         </div>
         <p className="text-white/50 text-sm">
-          &copy; {currentYear} Gian Pierre Lopez Manzano. All rights reserved.
+          &copy; {currentYear} Gian Lopez. All rights reserved.
         </p>
       </div>
     </footer>

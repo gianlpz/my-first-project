@@ -1,12 +1,12 @@
 const timelineItems = [
   {
-    title: "UX Designer & Front End Development",
+    title: "AI Engineer & Frontend Developer",
     date: "2025 - Present",
     description:
       "Designing and building user-centered digital experiences with a focus on accessibility and inclusion. Combining UX design skills with front-end development to bring designs to life using React, Next.js, and modern web technologies.",
   },
   {
-    title: "Career Transition",
+    title: "Self-Directed Learning & Building",
     date: "2023 - 2025",
     description:
       "Pivoted from healthcare to tech, driven by a passion for solving human problems through technology. Built skills in UX design, web development with React and Next.js, and working with AI tools — including building AI agents and understanding LLMs.",

@@ -12,8 +12,86 @@ export function Projects() {
         </h2>
 
         <Link
-          href="/glassbank"
+          href="/healthbridge"
           className="project-card block hover:scale-[1.02] transition-transform"
+        >
+          <div className="h-56 md:h-64 bg-gradient-to-br from-[#0d9488] via-[#14b8a6] to-[#2dd4bf] flex items-center justify-center rounded-t-xl">
+            <svg className="w-28 h-28 md:w-32 md:h-32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="HealthBridge logo">
+              <rect width="120" height="120" rx="28" fill="rgba(255,255,255,0.15)"/>
+              <rect x="50" y="30" width="20" height="60" rx="4" fill="white" opacity="0.9"/>
+              <rect x="30" y="50" width="60" height="20" rx="4" fill="white" opacity="0.9"/>
+              <circle cx="30" cy="30" r="4" fill="white" opacity="0.4"/>
+              <circle cx="90" cy="30" r="4" fill="white" opacity="0.4"/>
+              <circle cx="30" cy="90" r="4" fill="white" opacity="0.4"/>
+              <circle cx="90" cy="90" r="4" fill="white" opacity="0.4"/>
+              <line x1="34" y1="30" x2="50" y2="40" stroke="white" strokeWidth="1.5" opacity="0.3"/>
+              <line x1="86" y1="30" x2="70" y2="40" stroke="white" strokeWidth="1.5" opacity="0.3"/>
+              <line x1="34" y1="90" x2="50" y2="80" stroke="white" strokeWidth="1.5" opacity="0.3"/>
+              <line x1="86" y1="90" x2="70" y2="80" stroke="white" strokeWidth="1.5" opacity="0.3"/>
+            </svg>
+          </div>
+          <div className="p-6">
+            <h3 className="text-white text-lg md:text-xl font-semibold mb-2">
+              HealthBridge
+            </h3>
+            <p className="text-white/60 text-sm md:text-base">
+              An AI symptom triage assistant powered by RAG, tool use, and
+              multi-step reasoning.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-4">
+              <span className="meta-badge">AI Engineering</span>
+              <span className="meta-badge">RAG</span>
+              <span className="meta-badge">Next.js 16</span>
+            </div>
+          </div>
+        </Link>
+
+        <Link
+          href="/coaching-app"
+          className="project-card block hover:scale-[1.02] transition-transform mt-8"
+        >
+          <div className="h-56 md:h-64 bg-gradient-to-br from-[#8B7355] via-[#A09078] to-[#8A9E82] flex items-center justify-center rounded-t-xl">
+            <svg className="w-28 h-28 md:w-32 md:h-32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Coaching App logo">
+              <defs>
+                <linearGradient id="ca-bg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="#8B7355"/>
+                  <stop offset="100%" stopColor="#6F5B3E"/>
+                </linearGradient>
+                <linearGradient id="ca-accent" x1="40" y1="30" x2="80" y2="90" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="#B89E8A"/>
+                  <stop offset="100%" stopColor="#8A9E82"/>
+                </linearGradient>
+              </defs>
+              <rect width="120" height="120" rx="28" fill="url(#ca-bg)"/>
+              <rect x="0" y="0" width="120" height="60" rx="28" fill="rgba(255,255,255,0.12)"/>
+              <g transform="translate(60,60)">
+                <circle r="32" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="1.5"/>
+                <path d="M0,-30 L6,-6 L30,0 L6,6 L0,30 L-6,6 L-30,0 L-6,-6 Z" fill="url(#ca-accent)" opacity="0.9"/>
+                <path d="M0,-14 L4,0 L0,14 L-4,0 Z" fill="white" opacity="0.95"/>
+                <circle r="3" fill="white"/>
+              </g>
+              <rect x="8" y="8" width="50" height="24" rx="12" fill="rgba(255,255,255,0.15)"/>
+            </svg>
+          </div>
+          <div className="p-6">
+            <h3 className="text-white text-lg md:text-xl font-semibold mb-2">
+              Coaching App
+            </h3>
+            <p className="text-white/60 text-sm md:text-base">
+              An evidence-based coaching platform for career, relationships, and
+              personal growth.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-4">
+              <span className="meta-badge">UX Research</span>
+              <span className="meta-badge">UI Design</span>
+              <span className="meta-badge">Web App</span>
+            </div>
+          </div>
+        </Link>
+
+        <Link
+          href="/glassbank"
+          className="project-card block hover:scale-[1.02] transition-transform mt-8"
         >
           <div className="h-56 md:h-64 bg-gradient-to-br from-[#0a0a1a] via-[#1a1030] to-[#0d0d1f] flex items-center justify-center rounded-t-xl">
             <svg className="w-28 h-28 md:w-32 md:h-32" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="GlassBank logo">
@@ -72,84 +150,6 @@ export function Projects() {
               <span className="meta-badge">UX Research</span>
               <span className="meta-badge">UI Design</span>
               <span className="meta-badge">Mobile App</span>
-            </div>
-          </div>
-        </Link>
-
-        <Link
-          href="/coaching-app"
-          className="project-card block hover:scale-[1.02] transition-transform mt-8"
-        >
-          <div className="h-56 md:h-64 bg-gradient-to-br from-[#8B7355] via-[#A09078] to-[#8A9E82] flex items-center justify-center rounded-t-xl">
-            <svg className="w-28 h-28 md:w-32 md:h-32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Coaching App logo">
-              <defs>
-                <linearGradient id="ca-bg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stopColor="#8B7355"/>
-                  <stop offset="100%" stopColor="#6F5B3E"/>
-                </linearGradient>
-                <linearGradient id="ca-accent" x1="40" y1="30" x2="80" y2="90" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stopColor="#B89E8A"/>
-                  <stop offset="100%" stopColor="#8A9E82"/>
-                </linearGradient>
-              </defs>
-              <rect width="120" height="120" rx="28" fill="url(#ca-bg)"/>
-              <rect x="0" y="0" width="120" height="60" rx="28" fill="rgba(255,255,255,0.12)"/>
-              <g transform="translate(60,60)">
-                <circle r="32" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="1.5"/>
-                <path d="M0,-30 L6,-6 L30,0 L6,6 L0,30 L-6,6 L-30,0 L-6,-6 Z" fill="url(#ca-accent)" opacity="0.9"/>
-                <path d="M0,-14 L4,0 L0,14 L-4,0 Z" fill="white" opacity="0.95"/>
-                <circle r="3" fill="white"/>
-              </g>
-              <rect x="8" y="8" width="50" height="24" rx="12" fill="rgba(255,255,255,0.15)"/>
-            </svg>
-          </div>
-          <div className="p-6">
-            <h3 className="text-white text-lg md:text-xl font-semibold mb-2">
-              Coaching App
-            </h3>
-            <p className="text-white/60 text-sm md:text-base">
-              An evidence-based coaching platform for career, relationships, and
-              personal growth.
-            </p>
-            <div className="flex flex-wrap gap-2 mt-4">
-              <span className="meta-badge">UX Research</span>
-              <span className="meta-badge">UI Design</span>
-              <span className="meta-badge">Web App</span>
-            </div>
-          </div>
-        </Link>
-
-        <Link
-          href="/healthbridge"
-          className="project-card block hover:scale-[1.02] transition-transform mt-8"
-        >
-          <div className="h-56 md:h-64 bg-gradient-to-br from-[#0d9488] via-[#14b8a6] to-[#2dd4bf] flex items-center justify-center rounded-t-xl">
-            <svg className="w-28 h-28 md:w-32 md:h-32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="HealthBridge logo">
-              <rect width="120" height="120" rx="28" fill="rgba(255,255,255,0.15)"/>
-              <rect x="50" y="30" width="20" height="60" rx="4" fill="white" opacity="0.9"/>
-              <rect x="30" y="50" width="60" height="20" rx="4" fill="white" opacity="0.9"/>
-              <circle cx="30" cy="30" r="4" fill="white" opacity="0.4"/>
-              <circle cx="90" cy="30" r="4" fill="white" opacity="0.4"/>
-              <circle cx="30" cy="90" r="4" fill="white" opacity="0.4"/>
-              <circle cx="90" cy="90" r="4" fill="white" opacity="0.4"/>
-              <line x1="34" y1="30" x2="50" y2="40" stroke="white" strokeWidth="1.5" opacity="0.3"/>
-              <line x1="86" y1="30" x2="70" y2="40" stroke="white" strokeWidth="1.5" opacity="0.3"/>
-              <line x1="34" y1="90" x2="50" y2="80" stroke="white" strokeWidth="1.5" opacity="0.3"/>
-              <line x1="86" y1="90" x2="70" y2="80" stroke="white" strokeWidth="1.5" opacity="0.3"/>
-            </svg>
-          </div>
-          <div className="p-6">
-            <h3 className="text-white text-lg md:text-xl font-semibold mb-2">
-              HealthBridge
-            </h3>
-            <p className="text-white/60 text-sm md:text-base">
-              An AI symptom triage assistant powered by RAG, tool use, and
-              multi-step reasoning.
-            </p>
-            <div className="flex flex-wrap gap-2 mt-4">
-              <span className="meta-badge">AI Engineering</span>
-              <span className="meta-badge">RAG</span>
-              <span className="meta-badge">Next.js 16</span>
             </div>
           </div>
         </Link>

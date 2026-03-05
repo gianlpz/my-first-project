@@ -1,41 +1,29 @@
-import { Users, PenTool, Smartphone, Palette, Accessibility, Code } from "lucide-react";
+import { Brain, Code, PenTool, Accessibility } from "lucide-react";
 
 const skills = [
   {
-    icon: Users,
-    title: "User Research",
+    icon: Brain,
+    title: "AI Engineering",
     description:
-      "Conducting interviews, surveys, and usability testing to understand user needs.",
-  },
-  {
-    icon: PenTool,
-    title: "Wireframing",
-    description:
-      "Creating low and high-fidelity wireframes to visualize solutions.",
-  },
-  {
-    icon: Smartphone,
-    title: "Prototyping",
-    description:
-      "Building interactive prototypes using Figma and other design tools.",
-  },
-  {
-    icon: Palette,
-    title: "Visual Design",
-    description:
-      "Crafting beautiful interfaces with attention to typography and color.",
-  },
-  {
-    icon: Accessibility,
-    title: "Accessibility",
-    description:
-      "Designing inclusive experiences that work for users of all abilities.",
+      "Building with LLMs, RAG pipelines, API integration, and agentic workflows. Designing intelligent features that solve real problems.",
   },
   {
     icon: Code,
     title: "Frontend Development",
     description:
-      "Building responsive interfaces with React, Next.js, and Tailwind CSS.",
+      "React, Next.js, TypeScript, and Tailwind CSS. Building responsive, accessible, and performant web applications.",
+  },
+  {
+    icon: PenTool,
+    title: "UX/UI Design",
+    description:
+      "User research, wireframing, prototyping, visual design, and usability testing. Designing inclusive experiences grounded in real user needs.",
+  },
+  {
+    icon: Accessibility,
+    title: "Accessibility",
+    description:
+      "Designing and building inclusive experiences that work for users of all abilities. WCAG compliance and assistive technology support.",
   },
 ];
 
@@ -47,7 +35,7 @@ export function Skills() {
           Skills
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6">
           {skills.map((skill) => {
             const Icon = skill.icon;
             return (
