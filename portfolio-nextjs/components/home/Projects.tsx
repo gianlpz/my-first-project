@@ -47,6 +47,35 @@ export function Projects() {
         </Link>
 
         <Link
+          href="/ux-research"
+          className="project-card block hover:scale-[1.02] transition-transform mt-8"
+        >
+          <div className="h-56 md:h-64 bg-gradient-to-br from-[#f97316] via-[#f472b6] to-[#ec4899] flex items-center justify-center rounded-t-xl">
+            <svg className="w-28 h-28 md:w-32 md:h-32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="UX Research App logo">
+              <rect width="120" height="120" rx="28" fill="rgba(255,255,255,0.15)"/>
+              <circle cx="52" cy="52" r="22" stroke="white" strokeWidth="5" fill="none" opacity="0.9"/>
+              <line x1="68" y1="68" x2="88" y2="88" stroke="white" strokeWidth="5" strokeLinecap="round" opacity="0.9"/>
+              <circle cx="52" cy="46" r="7" fill="white" opacity="0.7"/>
+              <path d="M40 64 Q46 56 52 56 Q58 56 64 64" stroke="white" strokeWidth="3" fill="none" opacity="0.7" strokeLinecap="round"/>
+            </svg>
+          </div>
+          <div className="p-6">
+            <h3 className="text-white text-lg md:text-xl font-semibold mb-2">
+              UX Research App
+            </h3>
+            <p className="text-white/60 text-sm md:text-base">
+              An AI-powered UX research assistant with 6 tools for personas,
+              empathy maps, user flows, and more.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-4">
+              <span className="meta-badge">AI Engineering</span>
+              <span className="meta-badge">Tool Use</span>
+              <span className="meta-badge">Next.js 16</span>
+            </div>
+          </div>
+        </Link>
+
+        <Link
           href="/coaching-app"
           className="project-card block hover:scale-[1.02] transition-transform mt-8"
         >
