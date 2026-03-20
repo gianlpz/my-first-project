@@ -70,6 +70,63 @@ export function Projects() {
         </Link>
 
         <Link
+          href="/access4u"
+          className="project-card block hover:scale-[1.02] transition-transform mt-8"
+        >
+          <div className="h-56 md:h-64 bg-gradient-to-br from-[#6366f1] via-[#818cf8] to-[#a5b4fc] flex items-center justify-center rounded-t-xl">
+            <svg className="w-28 h-28 md:w-32 md:h-32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Access4U logo">
+              <defs>
+                <linearGradient id="a4u-bg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="#6366f1" stopOpacity="0.8"/>
+                  <stop offset="100%" stopColor="#4f46e5" stopOpacity="0.5"/>
+                </linearGradient>
+                <linearGradient id="a4u-shield" x1="30" y1="30" x2="90" y2="90" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="white" stopOpacity="0.95"/>
+                  <stop offset="100%" stopColor="#a5b4fc" stopOpacity="0.8"/>
+                </linearGradient>
+                <linearGradient id="a4u-shine" x1="0" y1="0" x2="120" y2="60" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="white" stopOpacity="0.5"/>
+                  <stop offset="50%" stopColor="white" stopOpacity="0"/>
+                </linearGradient>
+                <filter id="a4u-glow">
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <rect width="120" height="120" rx="28" fill="url(#a4u-bg)"/>
+              <rect x="0" y="0" width="120" height="55" rx="28" fill="rgba(255,255,255,0.1)"/>
+              <g transform="translate(60,60)">
+                <path d="M0,-32 L-22,0 L-14,24 L14,24 L22,0 Z" fill="url(#a4u-shield)"/>
+                <polyline points="-8,2 -2,10 10,-6" stroke="#4f46e5" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+              </g>
+              <polygon points="60,10 35,45 60,38" fill="url(#a4u-shine)" opacity="0.4"/>
+              <circle cx="30" cy="30" r="3" fill="white" opacity="0.5" filter="url(#a4u-glow)"/>
+              <circle cx="90" cy="30" r="2.5" fill="white" opacity="0.4" filter="url(#a4u-glow)"/>
+              <circle cx="30" cy="90" r="2.5" fill="white" opacity="0.3" filter="url(#a4u-glow)"/>
+              <circle cx="90" cy="90" r="3" fill="white" opacity="0.4" filter="url(#a4u-glow)"/>
+              <line x1="33" y1="30" x2="48" y2="40" stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeLinecap="round"/>
+              <line x1="87" y1="30" x2="72" y2="40" stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeLinecap="round"/>
+              <line x1="33" y1="90" x2="48" y2="80" stroke="rgba(255,255,255,0.25)" strokeWidth="1" strokeLinecap="round"/>
+              <line x1="87" y1="90" x2="72" y2="80" stroke="rgba(255,255,255,0.25)" strokeWidth="1" strokeLinecap="round"/>
+            </svg>
+          </div>
+          <div className="p-6">
+            <h3 className="text-white text-lg md:text-xl font-semibold mb-2">
+              Access4U
+            </h3>
+            <p className="text-white/60 text-sm md:text-base">
+              An accessibility scanner that uses AI to explain WCAG violations
+              and generate code fixes with visual diffs.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-4">
+              <span className="meta-badge">Accessibility</span>
+              <span className="meta-badge">AI Engineering</span>
+              <span className="meta-badge">Next.js 16</span>
+            </div>
+          </div>
+        </Link>
+
+        <Link
           href="/nhs-visualizer"
           className="project-card block hover:scale-[1.02] transition-transform mt-8"
         >
